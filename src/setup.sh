@@ -50,7 +50,7 @@ main() {
 
     # git
     echo "installing git now"
-    echo $sudoPW | sudo -S apt-get install git-all
+    echo $sudoPW | sudo -S apt-get install git
     git clone https://github.com/tsw303005/linux-env-setup.git
     cd ./linux-env-setup
 
