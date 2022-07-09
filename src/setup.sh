@@ -17,11 +17,11 @@ function checkUserTyping() {
 
 # check password
 function typePW() {
-    if [ -f .env ]
+    if [ -f $HOME/.env ]
     then
-        export $(cat ./.env | xargs)
+        export $(cat $HOME/.env | xargs)
     else
-        echo "please create .env file in src dir"
+        echo "please create .env file in $HOME/.env"
         exit 1
     fi
 
