@@ -58,7 +58,7 @@ main() {
     value=$?
     if [ "$value" == 1 ]
     then
-        source ./git/git.sh
+        source $REPO_DIR/src/git/git.sh
     else
         echo "skip setting up gitconfig"
     fi
@@ -69,7 +69,7 @@ main() {
     value=$?
     if [ "$value" == 1 ]
     then
-        source ./zsh/zsh.sh
+        source $REPO_DIR/src/zsh/zsh.sh
     else
         echo "skip installing zsh"
     fi
@@ -79,7 +79,7 @@ main() {
     value=$?
     if [ "$value" == 1 ]
     then
-        source ./vim/vim.sh
+        source $REPO_DIR/src/vim/vim.sh
     else
         echo "skip installing vim"
     fi
@@ -89,7 +89,7 @@ main() {
     value=$?
     if [ "$value" == 1 ]
     then
-        source ./docker/docker.sh
+        source $REPO_DIR/src/docker/docker.sh
     else
         echo "skip installing docker"
     fi
