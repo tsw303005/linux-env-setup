@@ -49,14 +49,19 @@ main() {
     echo $sudoPW | sudo -S apt install curl
 
     # git
-    checkUserTyping "git"
+    echo $sudoPW | sudo -S apt install git-all
+    git clone https://github.com/tsw303005/linux-env-setup.git
+    cd ./linux-env-setup
+
+    checkUserTyping "git-setup"
     value=$?
     if [ "$value" == 1 ]
     then
         source ./git/git.sh
     else
-        echo "skip installing git"
+        echo "skip setting up gitconfig"
     fi
+
 
     # zsh
     checkUserTyping "zsh"
