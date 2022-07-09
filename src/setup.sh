@@ -42,13 +42,14 @@ main() {
     # make sure that you have already created .env file and set up variable
     typePW
 
-    echo "start to set up env \n"
+    echo "start to set up env"
     echo $sudoPW | sudo -S apt update && sudo -S apt upgrade
 
-    echo "installing curl now \n"
+    echo "installing curl now"
     echo $sudoPW | sudo -S apt install curl
 
     # git
+    echo "installing git now"
     echo $sudoPW | sudo -S apt install git-all
     git clone https://github.com/tsw303005/linux-env-setup.git
     cd ./linux-env-setup
