@@ -27,22 +27,36 @@ function typePW() {
 
     if [ -z "$sudoPW" ]
     then
-        echo "please set up sudoPW variable in .env file"
+        echo "please set up variable in .env file"
         exit 1
     fi
 }
 
 
 main() {
+    # setup path
+    export REPO_DIR=$HOME/linux-env-setup
+    export BACKUP_DIR=$HOME/.linux-env-setup
+
     # type password to authorize
-    # make sure that you have already created .env file and set up sudoPW variable
+    # make sure that you have already created .env file and set up variable
     typePW
 
     echo "start to set up env \n"
     echo $sudoPW | sudo -S apt update && sudo -S apt upgrade
 
     echo "installing curl now \n"
-    sudo -S apt install curl
+    echo $sudoPW | sudo -S apt install curl
+
+    # git
+    checkUserTyping "git"
+    value=$?
+    if [ "$value" == 1 ]
+    then
+        source ./git/git.sh
+    else
+        echo "skip installing git"
+    fi
 
     # zsh
     checkUserTyping "zsh"
@@ -51,7 +65,7 @@ main() {
     then
         source ./zsh/zsh.sh
     else
-        echo "skip install zsh"
+        echo "skip installing zsh"
     fi
 
     # vim
@@ -61,8 +75,20 @@ main() {
     then
         source ./vim/vim.sh
     else
-        echo "skip install vim"
+        echo "skip installing vim"
     fi
+
+    # docker and docker-compose
+    checkUserTyping "docker"
+    value=$?
+    if [ "$value" == 1 ]
+    then
+        source ./docker/docker.sh
+    else
+        echo "skip installing docker"
+    fi
+
+    echo "all tasks done~"
 }
 
 # entry point
