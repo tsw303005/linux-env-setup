@@ -44,13 +44,24 @@ main() {
     echo "installing curl now \n"
     sudo -S apt install curl
 
-    # checkUserTyping
+    # zsh
     checkUserTyping "zsh"
-    if [ $? ]
+    value=$?
+    if [ "$value" == 1 ]
     then
         source ./zsh/zsh.sh
     else
         echo "skip install zsh"
+    fi
+
+    # vim
+    checkUserTyping "vim"
+    value=$?
+    if [ "$value" == 1 ]
+    then
+        source ./vim/vim.sh
+    else
+        echo "skip install vim"
     fi
 }
 
