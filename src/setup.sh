@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 # define result
 function checkUserTyping() {
     while true; do
