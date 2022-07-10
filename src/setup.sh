@@ -38,7 +38,7 @@ function typePW() {
 main() {
     # setup path
     export REPO_DIR=$HOME/linux-env-setup
-    export BACKUP_DIR=$HOME/.linux-env-setup
+    export BACKUP_DIR=$HOME/.linux-env-backup
     if [[ ! -d "$BACKUP_DIR" ]]
     then
         echo "create backup dir"
