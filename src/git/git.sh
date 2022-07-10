@@ -5,7 +5,7 @@ set -e
 main() {
     echo "starting to setup .gitconfig"
     if [ -f $HOME/.gitconfig ]; then
-        mv $HOME/.gitconfig $BACKUP_DIR/
+        echo $sudoPW | sudo -S mv $HOME/.gitconfig $BACKUP_DIR/
     fi
     cp $REPO_DIR/src/git/.gitconfig $HOME/.gitconfig
 
