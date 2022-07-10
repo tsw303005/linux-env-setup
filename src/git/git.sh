@@ -3,6 +3,7 @@
 set -e
 
 main() {
+    echo "starting to setup .gitconfig"
     if [ -f $HOME/.gitconfig ]; then
         mv $HOME/.gitconfig $BACKUP_DIR
     fi
