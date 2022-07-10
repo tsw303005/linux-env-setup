@@ -5,7 +5,8 @@ function checkUserTyping() {
     while true; do
         echo -n "Do you want to install $1? (Y/n): "
         read response
-        response=${response:y}
+        response=${response:-y}
+        echo $response
 
         case $response in
             [yY]) return 1
