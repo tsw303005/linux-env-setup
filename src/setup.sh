@@ -41,7 +41,7 @@ main() {
     export BACKUP_DIR=$HOME/.linux-env-backup
     echo $REPO_DIR
     echo $BACKUP_DIR
-    
+
     if [[ ! -d "$BACKUP_DIR" ]]
     then
         echo "create backup dir"
@@ -61,7 +61,7 @@ main() {
     # git
     echo "installing git now"
     echo $sudoPW | sudo -S apt-get install -y git
-    git clone https://github.com/tsw303005/linux-env-setup.git
+    git clone https://github.com/tsw303005/linux-env-setup.git $REPO_DIR
 
     checkUserTyping "git-setup"
     value=$?
