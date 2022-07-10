@@ -96,6 +96,12 @@ main() {
     else
         echo "skip installing zsh"
     fi
+
+    # remove clone file
+    rm -rf $REPO_DIR
+
+    # activate zsh shell now
+    exec ${which zsh}
 }
 
 # entry point

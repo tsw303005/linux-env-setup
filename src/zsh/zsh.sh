@@ -18,9 +18,6 @@ main() {
     echo "starting to install autosuggestion on zsh..."
     git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/zsh-autosuggestions
     echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
-    
-    # activate zsh shell now
-    exec ${which zsh}
 }
 
 main
