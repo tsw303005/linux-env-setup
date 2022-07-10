@@ -82,6 +82,7 @@ main() {
 
     # docker and docker-compose
     checkUserTyping "docker"
+    echo $?
     value=$?
     if [ "$value" == 1 ]
     then
