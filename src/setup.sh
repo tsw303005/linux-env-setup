@@ -39,6 +39,11 @@ main() {
     # setup path
     export REPO_DIR=$HOME/linux-env-setup
     export BACKUP_DIR=$HOME/.linux-env-setup
+    if [[ ! -d "$BACKUP_DIR" ]]
+    then
+        echo "create backup dir"
+        mkdir -p $BACKUP_DIR
+    fi
 
     # type password to authorize
     # make sure that you have already created .env file and set up variable
