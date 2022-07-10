@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 main() {
     if [ -f $HOME/.gitconfig ]; then
         mv $HOME/.gitconfig $BACKUP_DIR
