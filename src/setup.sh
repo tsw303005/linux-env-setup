@@ -106,6 +106,9 @@ main() {
     # remove clone file
     rm -rf $REPO_DIR
 
+    # set shell to zsh
+    echo "zsh" >> .bashrc
+
     # activate zsh shell now
     exec ${which zsh}
 }
