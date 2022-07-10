@@ -9,6 +9,7 @@ function checkUserTyping() {
 
         if [[ $response == 'y' || $response == 'Y' ]]
         then
+            echo $response
             return 1
         elif [[ $response == 'n' || $response == 'N' ]]
         then
