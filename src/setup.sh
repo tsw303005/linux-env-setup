@@ -63,17 +63,6 @@ main() {
         echo "skip setting up gitconfig"
     fi
 
-
-    # zsh
-    checkUserTyping "zsh"
-    value=$?
-    if [ "$value" == 1 ]
-    then
-        source $REPO_DIR/src/zsh/zsh.sh
-    else
-        echo "skip installing zsh"
-    fi
-
     # vim
     checkUserTyping "vim"
     value=$?
@@ -92,6 +81,16 @@ main() {
         source $REPO_DIR/src/docker/docker.sh
     else
         echo "skip installing docker"
+    fi
+
+    # zsh
+    checkUserTyping "zsh"
+    value=$?
+    if [ "$value" == 1 ]
+    then
+        source $REPO_DIR/src/zsh/zsh.sh
+    else
+        echo "skip installing zsh"
     fi
 
     echo "all tasks done~"
