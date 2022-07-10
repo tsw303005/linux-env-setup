@@ -28,6 +28,9 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/tsw303005/linux-env-setu
 - curl
 - bash shell
 
+## Test
+I write a dockerfile to test in ubuntu:18.04. You can try in your own docker container.
+
 ## Future Work
 1. update remove.sh
 2. tmux
