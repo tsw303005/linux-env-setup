@@ -66,7 +66,6 @@ main() {
     git clone https://github.com/tsw303005/linux-env-setup.git $REPO_DIR
 
     # git-config file
-    echo "lalala"
     checkUserTyping "git-config"
     if [ "$value" == "yes" ]
     then
@@ -105,6 +104,9 @@ main() {
 
     # remove clone file
     rm -rf $REPO_DIR
+
+    # remove .env file
+    rm $HOME/.env
 
     # set shell to zsh
     echo "zsh" >> ~/.bash_profile

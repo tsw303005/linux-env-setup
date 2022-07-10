@@ -14,6 +14,11 @@ This is shell script for developer to quickly set up tools needed in Linux. Cont
 ```
 sudoPW=<sudo password>
 ```
+2. install curl
+```
+sudo apt update && sudo apt upgrade
+sudo apt install -y curl
+```
 2. type the following command on bash shell.
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/tsw303005/linux-env-setup/master/src/setup.sh)"
