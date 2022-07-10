@@ -8,4 +8,6 @@ WORKDIR /src
 
 RUN echo "sudoPW=docker" >> $HOME/.env
 
+RUN echo "docker" | sudo -S apt install -y curl
+
 CMD /bin/bash

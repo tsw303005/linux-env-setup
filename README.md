@@ -16,7 +16,7 @@ sudoPW=<sudo password>
 ```
 2. install curl
 ```
-sudo apt update
+sudo apt update && sudo apt upgrade
 sudo apt install -y curl
 ```
 2. type the following command on bash shell.

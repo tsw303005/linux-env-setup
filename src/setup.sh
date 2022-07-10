@@ -66,7 +66,6 @@ main() {
     git clone https://github.com/tsw303005/linux-env-setup.git $REPO_DIR
 
     # git-config file
-    echo "lalala"
     checkUserTyping "git-config"
     if [ "$value" == "yes" ]
     then
