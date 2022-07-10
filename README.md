@@ -1,9 +1,23 @@
 # linux env setup
+## Discription
+This is shell script for developer to quickly set up tools needed in Linux. Contact me if you have any suggection.
+
+## Tools
+1. git and gitconfig
+2. vim
+3. docker
+4. zsh and oh-my-zsh
 
 ## Quick Start
-Type the following command on your terminal
+1. create .env file and set variable sudoPW with sudo password.
+```
+sudoPW=<sudo password>
+```
+2. type the following command on bash shell.
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/tsw303005/linux-env-setup/master/src/setup.sh)"
 ```
 
-
+## Requirement
+- curl
+- bash shell
