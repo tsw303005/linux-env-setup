@@ -8,9 +8,8 @@ main() {
     zsh --version
 
     echo "set up zsh env"
-    ZSH_NAME=zsh
-    echo "export SHELL=$HOME/${which zsh}"
-    echo $SHELL
+    export SHELL=`which zsh` >> $HOME/.bash_profile
+    [ -z "$ZSH_VERSION" ] && exec "$SHELL" -l >> $HOME/.bash_profile
     echo "installing zsh done ~"
 
     echo "starting to install oh-my-zsh..."
@@ -21,7 +20,7 @@ main() {
     echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
     
     # activate zsh shell now
-    echo '[ -z "$ZSH_VERSION" ] && exec $SHELL -l' >> $HOME/.bash_profile
+    exec ${which zsh}
 }
 
 main
