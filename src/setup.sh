@@ -74,6 +74,7 @@ main() {
     value=$?
     if [ "$value" == 1 ]
     then
+        echo "lalala"
         source $REPO_DIR/src/vim/vim.sh
     else
         echo "skip installing vim"
