@@ -107,7 +107,7 @@ main() {
     rm -rf $REPO_DIR
 
     # set shell to zsh
-    echo "zsh" >> .bashrc
+    echo "zsh" >> ~/.bash_profile
 
     # activate zsh shell now
     zsh
