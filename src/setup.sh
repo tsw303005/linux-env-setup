@@ -46,11 +46,11 @@ main() {
     echo $sudoPW | sudo -S apt update && sudo -S apt upgrade
 
     echo "installing curl now"
-    echo $sudoPW | sudo -S apt install curl
+    echo $sudoPW | sudo -S apt install -y curl
 
     # git
     echo "installing git now"
-    echo $sudoPW | sudo -S apt-get install git
+    echo $sudoPW | sudo -S apt-get install -y git
     git clone https://github.com/tsw303005/linux-env-setup.git
     cd ./linux-env-setup
 
