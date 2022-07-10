@@ -2,7 +2,7 @@
 
 main() {
     echo "starting to install zsh..."
-    echo $sudoPW | sudo -S apt install zsh
+    echo $sudoPW | sudo -S apt install -y zsh
     zsh --version
 
     echo "change default shell from bash to zsh"
