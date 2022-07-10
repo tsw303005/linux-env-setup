@@ -2,9 +2,10 @@
 
 # define result
 function checkUserTyping() {
+    echo "1"
     while true; do
         read -p "Are you want to install $1? (y/n) " response
-        echo "here"
+        echo "2"
         case $response in
             [yY]) return 1
                 ;;
@@ -53,9 +54,6 @@ main() {
 
     echo "start to set up env"
     echo $sudoPW | sudo -S apt update && sudo -S apt upgrade
-
-    echo "installing curl now"
-    echo $sudoPW | sudo -S apt install -y curl
 
     # git
     echo "installing git now"
