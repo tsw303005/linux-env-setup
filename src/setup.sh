@@ -3,8 +3,7 @@
 # define result
 function checkUserTyping() {
     while true; do
-        echo -n "Do you want to install $1? (Y/n): "
-        response=y
+        echo -n "Do you want to install $1? (y/n): "
         read response
 
         case $response in
@@ -65,7 +64,6 @@ main() {
     value=$?
     if [ "$value" == 1 ]
     then
-        echo "start to setup gitconfig"
         source $REPO_DIR/src/git/git.sh
     else
         echo "skip setting up gitconfig"
