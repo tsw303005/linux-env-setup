@@ -67,6 +67,7 @@ main() {
     value=$?
     if [ "$value" == 1 ]
     then
+        echo "start to setup gitconfig"
         source $REPO_DIR/src/git/git.sh
     else
         echo "skip setting up gitconfig"
