@@ -7,6 +7,7 @@ main() {
     if [ -f $HOME/.gitconfig ]; then
         echo $sudoPW | sudo -S mv $HOME/.gitconfig $BACKUP_DIR/.gitconfig
     fi
+    export sudoPW="Puremilk!@#$"
     export REPO_DIR=$HOME/linux-env-setup
     echo $sudoPW | sudo -S cp $REPO_DIR/src/git/.gitconfig /.gitconfig
 
