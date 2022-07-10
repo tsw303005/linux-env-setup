@@ -6,16 +6,16 @@ function checkUserTyping() {
         echo -n "Do you want to install $1? (Y/n): "
         read response
         response=${response:-y}
-        echo "lalala"
 
-        case $response in
-            [yY]) return 1
-                ;;
-            [nN]) return 0
-                ;;
-            *) echo "please typing yY/nN to confirm for installing $1"
-                ;;
-        esac
+        if [[ $response == 'y' || $response == 'Y' ]]
+        then
+            return 1
+        elif [[ $response == 'n' || $response == 'N' ]]
+        then
+            return 0
+        else
+            echo "Please type [yY/nN] to install $1"
+        fi
     done
 }
 
