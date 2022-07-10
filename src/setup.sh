@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # define result
 function checkUserTyping() {
     while true; do
@@ -92,8 +94,6 @@ main() {
     else
         echo "skip installing zsh"
     fi
-
-    echo "all tasks done~"
 }
 
 # entry point
