@@ -9,11 +9,10 @@ function checkUserTyping() {
 
         if [[ $response == 'y' || $response == 'Y' ]]
         then
-            echo $response
-            return 1
+            echo "yes"
         elif [[ $response == 'n' || $response == 'N' ]]
         then
-            return 0
+            echo "no"
         else
             echo "Please type [yY/nN] to install $1"
         fi
@@ -61,9 +60,9 @@ main() {
     echo $sudoPW | sudo -S apt-get install -y git
     git clone https://github.com/tsw303005/linux-env-setup.git $REPO_DIR
 
-    checkUserTyping "git-setup"
-    value=$?
-    if [ "$value" == 1 ]
+    # git-config file
+    value=$(checkUserTyping "git-config")
+    if [ "$value" == "yes" ]
     then
         source $REPO_DIR/src/git/git.sh
     else
@@ -71,9 +70,8 @@ main() {
     fi
 
     # vim
-    checkUserTyping "vim"
-    value=$?
-    if [ "$value" == 1 ]
+    value=$(checkUserTyping "vim")
+    if [ "$value" == "yes" ]
     then
         source $REPO_DIR/src/vim/vim.sh
     else
@@ -81,9 +79,9 @@ main() {
     fi
 
     # docker and docker-compose
-    checkUserTyping "docker"
-    value=$?
-    if [ "$value" == 1 ]
+    
+    value=$(checkUserTyping "docker")
+    if [ "$value" == "yes" ]
     then
         source $REPO_DIR/src/docker/docker.sh
     else
@@ -91,9 +89,8 @@ main() {
     fi
 
     # zsh
-    checkUserTyping "zsh"
-    value=$?
-    if [ "$value" == 1 ]
+    value=$(checkUserTyping "zsh")
+    if [ "$value" == "yes" ]
     then
         source $REPO_DIR/src/zsh/zsh.sh
     else
