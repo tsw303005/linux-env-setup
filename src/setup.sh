@@ -6,7 +6,7 @@ function checkUserTyping() {
         echo -n "Do you want to install $1? (Y/n): "
         read response
         response=${response:-y}
-        echo $response
+        echo "lalala"
 
         case $response in
             [yY]) return 1
@@ -71,11 +71,9 @@ main() {
 
     # vim
     checkUserTyping "vim"
-    echo "lalala"
     value=$?
     if [ "$value" == 1 ]
     then
-        echo "lalala"
         source $REPO_DIR/src/vim/vim.sh
     else
         echo "skip installing vim"
