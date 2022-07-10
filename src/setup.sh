@@ -2,10 +2,11 @@
 
 # define result
 function checkUserTyping() {
-    echo "1"
     while true; do
-        read -p "Are you want to install $1? (y/n) " response
-        echo "2"
+        echo -n "Do you want to install $1? (Y/n): "
+        response=y
+        read response
+
         case $response in
             [yY]) return 1
                 ;;
