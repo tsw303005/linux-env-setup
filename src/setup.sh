@@ -71,6 +71,7 @@ main() {
 
     # vim
     checkUserTyping "vim"
+    echo "lalala"
     value=$?
     if [ "$value" == 1 ]
     then
@@ -82,7 +83,6 @@ main() {
 
     # docker and docker-compose
     checkUserTyping "docker"
-    echo $?
     value=$?
     if [ "$value" == 1 ]
     then
