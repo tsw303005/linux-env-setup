@@ -5,8 +5,9 @@ This is shell script for developer to quickly set up tools needed in Linux. Cont
 ## Tools
 1. git and gitconfig
 2. vim
-3. docker
+3. docker and docker-compose
 4. zsh and oh-my-zsh
+5. autosuggestion
 
 ## Quick Start
 1. create .env file and set variable sudoPW with sudo password.
@@ -21,3 +22,11 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/tsw303005/linux-env-setu
 ## Requirement
 - curl
 - bash shell
+
+## Future Work
+1. update remove.sh
+2. tmux
+3. pyenv
+4. kubectl
+5. Makefile
+6. CMake
