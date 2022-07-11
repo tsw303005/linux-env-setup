@@ -33,8 +33,9 @@ I write a dockerfile to test in ubuntu:18.04. You can try in your own docker con
 
 ## Future Work
 1. update remove.sh
-2. tmux
-3. pyenv
-4. kubectl
-5. Makefile
-6. CMake
+2. update_tool.sh
+3. tmux
+4. pyenv
+5. kubectl
+6. Makefile
+7. CMake
