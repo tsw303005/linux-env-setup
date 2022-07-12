@@ -26,10 +26,18 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/tsw303005/linux-env-setu
 
 ## Requirement
 - curl
+- sudo
 - bash shell
 
 ## Test
 I write a dockerfile to test in ubuntu:18.04. You can try in your own docker container.
+```
+# activate an clean ubuntu container
+source src/test/test_setup_env.sh
+
+# make the following command to start install tool you need
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/tsw303005/linux-env-setup/master/src/setup.sh)"
+```
 
 ## Future Work
 1. update remove.sh
@@ -39,3 +47,4 @@ I write a dockerfile to test in ubuntu:18.04. You can try in your own docker con
 5. kubectl
 6. Makefile
 7. CMake
+8. write config file for user to set directly

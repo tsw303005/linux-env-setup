@@ -8,6 +8,7 @@ main() {
     zsh --version
 
     echo "starting to install oh-my-zsh..."
+    # install zsh without activating zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
     echo "starting to install autosuggestion on zsh..."
